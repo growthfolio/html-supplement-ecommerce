@@ -1,0 +1,133 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav li {
+    margin: 0 10px;
+}
+
+header nav li a {
+    font-size: 1.2rem;
+}
+/* Estilo banner_marca */
+.banner {
+    width: 375px;
+    height: 300px; /* altura do banner */
+    background-image: url("img\banner_2.png"); /* caminho para a imagem do banner */
+    background-size: cover;
+    background-position: center;
+  }
+  
+
+
+/* Estilos dos produtos em destaque */
+.produtos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.produtos li {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.produtos li img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.produtos li h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.produtos li p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.produtos li button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.produtos li button:hover {
+    background-color: #333;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer li {
+    margin-right: 10px;
+}
+
+footer li:last-child {
+    margin-right: 0;
+}
+
+footer li a {
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
