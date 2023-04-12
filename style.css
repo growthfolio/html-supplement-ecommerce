@@ -45,8 +45,8 @@ header nav li a {
 }
 /* Estilo banner_marca */
 .banner {
-    width: 100%;
-    height: 122px; /* altura do banner */
+    width: 100px;
+    height: 100px; 
     background-image: url("img/banner_1.png"); /* caminho para a imagem do banner */
     background-size: cover;
     background-position: center;
