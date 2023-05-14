@@ -1,0 +1,32 @@
+  /*efeito hover*/
+  nav ul li a {
+    border-radius: 10px; /* Define um raio de 10 pixels para os cantos do link */
+    padding: 10px; /* Adiciona um espaçamento interno para o link */
+    display: inline-block; /* Define o link como um elemento inline-block */
+  }
+  
+  nav ul li a:hover {
+    color: #fff;
+    background-color: #31632c;
+    border-radius: 10px; /* Define um raio de 10 pixels para os cantos do link no hover */
+  }
+
+
+
+
+
+  /*bkcp da barra de navegação sem hoover*/
+
+
+  header nav ul {
+    display: flex;
+}
+
+header nav li {
+    margin: 0 10px;
+}
+
+header nav li a {
+    font-size: 1.2rem;
+}
+  

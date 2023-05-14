@@ -3,29 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Supreme-Nutrition - Sua Loja de Suplementos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Supreme-Nutrition</h1>
-        <nav>
+    <header class="cabecalho">
+        <div class="tituloheader">
+            <img src="../img/init-imgs/supreme-nutrition-navbar.png" alt="">
+        </div>
+        <form action="#" method="get">
+            <input type="text" name="search" placeholder="Pesquisar...">
+            <button type="submit">Buscar</button>
+          </form>
+          
+        
+        <nav class="dp-menu">
             <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="produtos">Produtos</a>
+                <li>
+                    <a href="index.html">Produtos</a>
                     
-                  </li>
-                  
-                <li><a href="sobre.html">Sobre Nós</a></li>              
+                    <ul>
+                        <li><a href="#">WheyProtein</a></li>
+                        <li><a href="creatin.html">Creatina</a></li>
+                        <li><a href="pagina_pretreino.html">Pre-Treino</a></li>
+                    </ul>    
+                
+                </li>                  
+                <li><a href="#quem-somos" id="link-sobre-nos">Sobre Nós</a></li>              
                 <li><a href="cadastrar.html">Cadastrar</a></li>
                 <li><a href="entrar.html">Entrar</a></li>
             </ul>
-        </nav>
-        
+        </nav>    
     </header>
-        <div class="banner">
-        
-        </div>
+            
     <main>
+        <div class="imagem-cabecalho">
+            <img src="../img/init-imgs/supreme-nutrition-baner.png" alt="Descrição da imagem">
+          </div>
         <section>
             <h2>Promoções</h2>
             <ul class="produtos">
@@ -33,6 +47,7 @@
                     <img src="img\creatina_integral_300g.png" alt="Creatina integralmedica_300g">
                     <h3>Creatina integralmedica_300g</h3>
                     <p>R$ 153,99</p>
+                    
                     <button>Adicionar ao Carrinho</button>
                 </li>
                 <li>
