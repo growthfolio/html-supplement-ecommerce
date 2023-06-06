@@ -25,7 +25,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
    
   }
 
@@ -45,34 +45,30 @@
     justify-content: center;
     font-size: xx-large;
   }
+
+
   
 /* Config opções barra de nav = dp-menu */
-.dp-menu {
+#nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  
 }
 
-.dp-menu ul {
-  
+#nav ul {
   list-style-type: none;
   margin-right: 12px;
   padding: 5px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
-  
- 
-  
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.dp-menu ul li {
+#nav ul li {
   display: inline;
   position: relative;
 }
 
-.dp-menu ul li a {
+#nav ul li a {
   color: rgb(0, 0, 0);
   text-decoration: none;
   display: inline-block;
@@ -80,65 +76,180 @@
   margin-right: 2px;
 }
 
-.dp-menu ul li a:hover {
+#nav ul li a:hover {
   background-color: var(--cor-hover);
   border-radius: 8px;
 }
 
 /* Sub-menu */
-.dp-menu ul ul {
+#nav ul ul {
   display: none;
   position: absolute;
 }
 
-.dp-menu ul li:hover ul {
+#nav ul li:hover ul {
   display: block;
+  
 }
 
-.dp-menu ul ul {
+#nav ul ul {
   width: 150px;
 }
 
-.dp-menu ul ul li a {
+#nav ul ul li a {
   display: block;
 }
 
+.login-button {
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  margin-right: 2px;
+  background: none;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: medium;
+  
+  }
+
+.singup-button {
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  margin-right: 2px;
+  background: none;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: medium;
+
+}
+
+.singup-button:hover {
+  background-color: var(--cor-hover);
+  border-radius: 5px;
+
+}
+
+.login-button:hover {
+  background-color: var(--cor-hover);
+  border-radius: 8px;
+}
+
+/*botão hamburger*/
+#btn-mobile{
+  display: none;
+ } 
 
 @media screen and (max-width: 768px) {
-  .dp-menu ul {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 200px;
-    background-color: #f5f5f5;
+
+/*Retirar dos elementos*/
+
+
+#nav:hover {
+  background-color: initial;
+  border-radius: initial;
+}
+
+
+ /*Video aula*/
+  #btn-mobile {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-
-  .dp-menu ul li {
-    display: block;
-    margin-bottom: 8px;
-  }
-
-  .dp-menu ul li a {
-    display: block;
-    padding: 5px;
-  }
-
-  .dp-menu .hamburger {
-    display: block;
+    padding: .5rem 1rem;
+    font-size: 1rem ;
+    border: none;
+    background: none;
     cursor: pointer;
+    gap: .5rem;
+    z-index: 2000;  
+  
   }
 
-  .dp-menu .hamburger .line {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px;
+  #hamburger {
+    display: block;
+    border-top: 2px solid;
+    width: 20px;
+    z-index: 2000;
   }
+
+  #hamburger::after, #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+    margin-top: 5px;
+    z-index: 2000;
+    transition: .3s;
+    position: relative;
+
+  }
+
+  #nav.active #hamburger {
+    border-top-color: transparent;
+
+  }
+
+  #nav.active #hamburger::before {
+    transform: rotate(135deg) ;
+
+  }
+  
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg) ;
+    top: -7px;
+
+  }
+
+  .login-button{
+    font-size: medium;
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, .05);
+  }
+  .singup-button{
+    font-size: medium;
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    position: absolute;
+    width: 35%;
+    top: 10px;
+    right: -3%;
+    background-color: #e7e7e7 ;
+    border-radius: 1%; 
+    height: 0px;
+    transition: .6s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+        
+    
+  }
+  
+  
+
+  
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+    
+
+  }
+  #nav ul li a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, .05);
+  }
+ 
 }
 
 
@@ -183,26 +294,7 @@
     }
   }
   /*Estilo Botão singin e cadastro */
-  .login-button {
-  cursor: pointer;
-  border: none;
-  padding: 0;
-  background: none;
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  cursor: pointer
-  
 
-  }
-  .singup-button {
-    cursor: pointer;
-    border: none;
-    padding: 0;
-    background: none;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    cursor: pointer
-  }
  
 
   
@@ -225,17 +317,7 @@
     margin-bottom: 20px;
   }
   
-  /* Estilos dos banners init-page */
-  .square-box {
-    width: 350px;
-    height: 350px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  
   
 
 
@@ -277,24 +359,53 @@
   }
 }
 
+/* Estilos dos banners init-page */
 
-/* caixas teste
-
-.caixa-redes {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-right: 50px;
+.align-boxes {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
 }
-.caixa-redes li {
-    width: calc(33.33% - 5px);
-    margin-bottom: 20px;
-    padding: 5px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    list-style: none;
-} */
+
+.square-box {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  padding: 5%;
+  margin: 1%;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.box-tittle {
+  display: block;
+  color: var(--cor-fonte-sec);
+  font-size: 48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  
+  
+}
+
+.box-text {
+  display: none;
+  color: #f2f2f2;
+  font-size: 13px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+
+ 
+/* Fim edição das boxes */
 
 /* Estilos CSS */
 .caixa-redes {
@@ -310,7 +421,7 @@
     padding: 5px;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: auto rgba(0, 0, 0, 0.1);
+    box-shadow: auto rgba(0, 0, 0, 0.753);
     margin-left: 55px ;
     
 }
@@ -368,12 +479,6 @@ tex
 }
 
 
-
-
-
-
-
-
 /* Estilos do rodapé */
 footer {
     
@@ -388,6 +493,7 @@ footer {
 
 footer ul {
     display: flex;
+    justify-content: space-between;
     list-style: none;
 }
 
@@ -405,8 +511,9 @@ footer li a {
 }
 
 footer p {
-    margin: 0;
+    margin-left: 1%;
     font-size: 1rem;
+    color: white;
 }
 
 label {
@@ -418,30 +525,6 @@ label,input {
 
 
 }
-
-/*estilos para produtos*/
-/*
-.caixa-produtos {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.caixa-produtos li {
-  list-style: none;
-  margin-bottom: 20px;
-  padding: 10px;
-  background-color: #000000;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.caixa-produtos li img {
-  width: 100%;
-  margin-bottom: 0px;
-} */
-
-/* Estilos dos produtos em destaque */
 
 .corpo-form {
     width: 100%;
@@ -501,14 +584,6 @@ label,input {
 .caixa-produtos li button:hover {
   background-color: #333;
 }
-
-
-
-
-
-
-
-
 
 /*Estilização para pagiona dos produtos*/
 
@@ -570,6 +645,7 @@ label,input {
   
   justify-content: center;
   align-items: center;
+  z-index: 5000;
   
 }
 
@@ -608,30 +684,7 @@ label,input {
   display: flex;
   justify-content: space-between;
 }
-/*
-.login-button {
-  display: flex;
-  align-items: center;
-}
 
-.login-button button {
-  border: none;
-  background-color: #2b6b24;
-  padding: 0.4rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.login-button button:hover {
-  background-color: #010101;
-}
-
-.login-button button a {
-  text-decoration: none;
-  font-weight: 500;
-  color: #fff;
-}
-*/
 .close-button{
   display: flex;
   align-items: end
@@ -664,7 +717,7 @@ label,input {
   display: block;
   width: 5rem;
   height: 0.3rem;
-  background-color: #000000;
+ /* background-color: #000000;*/
   margin: 0 auto;
   position: absolute;
   border-radius: 10px;
@@ -764,16 +817,23 @@ label,input {
 @media screen and (max-width: 1064px) {
   
     
- 
+  .container{
+    position: relative;
+    margin-left: 50%;
+    margin-bottom: 20%;
+
+  }
   .container {
       width: 90%;
       height: auto;
+      margin-left: ;
+      
       
   }
   .input-group {
       flex-direction: column;
       z-index: 5;
-      padding-right: 5rem;
+      padding-right: 1em;
       max-height: 10rem;
       overflow-y: scroll;
       flex-wrap: nowrap;
@@ -794,6 +854,10 @@ label,input {
 
            /* Estilos Login-Box */
 
+  .login-position{
+    position:relative;
+  }
+
   .login-container {
   width: 300px;
   margin: 0 auto;
@@ -803,9 +867,15 @@ label,input {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: none;
   position: fixed;
-
-  
+  z-index: 5001;
+   
 }
+.login-container {
+  position: absolute;
+  top: 7%;
+  right: 1%;
+}
+
 
 .login-box h2 {
   margin-bottom: 30px;
@@ -859,85 +929,91 @@ label,input {
 }
 
 
+/*Carrossel styles*/
 
+.alinhar-section h2{
+  font-size: medium;
+}
 
+.alinhar-section {
+  background-color: rgba(255, 255, 255, 0.5);;
+  margin-left: 30%;
+  margin-right: 30%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2%;
+}
 
-
-
-
-
-
-
-/*
-.janela-cadastro {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
+.carrossel {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
-
-.center-style {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100%;
+  justify-content: center; /* Adiciona centralização horizontal dos logotipos */
 }
 
-.container {
-  width: 50%;
+.logotipos {
+  display: flex;
+  animation: carrossel-animation 20s infinite linear;
+}
+
+.logotipos img {
+  width: 100px; /* Defina o tamanho adequado para os logotipos */
   height: auto;
-  background-color: #fff;
-  padding: 2rem;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+  margin: 0 10px; /* Defina a margem entre os logotipos */
+  opacity: 0.8; /* Adiciona transparência aos logotipos não ativos */
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
+.logotipos img:first-child {
+  opacity: 1; /* Garante que o primeiro logotipo esteja sempre visível */
 }
 
-.form-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.form-header h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-.login-button button {
+.botaoEsquerda,
+.botaoDireita {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.5); /* Adiciona um fundo semitransparente aos botões */
   border: none;
-  background-color: #3f9136;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave ao fundo dos botões */
 }
 
-.login-button button:hover {
-  background-color: #010101;
+.botaoEsquerda:hover,
+.botaoDireita:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Altera o fundo dos botões ao passar o mouse */
 }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.5rem;
+.botaoEsquerda {
+  left: 10px;
 }
 
-.input-box label {
-  font-size: 0.875rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+.botaoDireita {
+  right: 10px;
 }
 
-.input-box input {
-  padding
-*/
+@keyframes carrossel-animation {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-20%);
+  }
+  40% {
+    transform: translateX(-40%);
+  }
+  60% {
+    transform: translateX(-60%);
+  }
+  80% {
+    transform: translateX(-80%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/*Fim carrossel*/

@@ -21,42 +21,27 @@
           </form>
           
         
-        <nav class="dp-menu">
-            <ul >
-                <li>
-                    <a href="index.html">Início</a></li>
-                <li>
-                    <a href="index.html">Produtos</a>
-                    
+        <nav class="main-menu" id="nav">
+            <button id="btn-mobile">Menu
+                <span class="hamburger" id="hamburger"></span>
+            </button>         
+                       
+            
+            <ul id="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html">Produtos</a>                    
                     <ul>
-                        <li><a class="whey-page" href="pagina_whey.html">WheyProtein</a></li>
+                        <li><a class="whey-page" href="pagina_whey.html">Whey Protein</a></li>
                         <li><a class="creatin-page" href="creatin.html">Creatina</a></li>
-                        <li><a class="pret-page" href="pre_treino.html">Pre-Treino</a></li>
+                        <li><a class="pre-treino-page" href="pre_treino.html">Pré-Treino</a></li>
                     </ul>                   
                 </li>                  
-                <li><a href="#quem-somos" id="link-sobre-nos">Sobre Nós</a>
-                </li> 
-                                                             
-                
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <ul>
-                <li>
-                    <button class="singup-button" onclick="singup()">Cadastrar</button>
-                    
-                </li>
-                    <button class="login-button" onclick="toggleLogin()">Entrar</button>      
-                </li>
-            </ul>
-
-
-
-                
-        </nav>   
+                <li><a href="#quem-somos" id="link-sobre-nos">Sobre Nós</a></li>                                           
+                <li><button class="singup-button" onclick="singup()">Cadastrar</button></li>
+                <li><button class="login-button" onclick="toggleLogin()">Entrar</button></li>
+            </ul>           
+        </nav>
+          
           
       
     </header>
@@ -64,25 +49,26 @@
                      
     <main>
         <!--Janela Login -->
-<div class="login-container">
-                                    
-    <h2 class="title">Login</h2>
-        <form action="#" class="login-form">
-            <div class="form-login-header">
-                <div class="input-box">
-                    <input type="email" name="email" required>
-                    <label>E-mail</label>
-                </div>
-                <div class="input-box">
-                    <input type="password" name="password" required>
-                    <label>Senha</label>
-                </div>
-                <div class="continue-button">
-                <button type="submit">Entrar</button>
-                </div>
-            </div>    
-        </form>
-</div>
+  <div class="login-position">  
+        <div class="login-container">                                                
+            <h2 class="title">Login</h2>
+                <form action="#" class="login-form">
+                    <div class="form-login-header">
+                        <div class="input-box">
+                            <label>E-mail</label>
+                            <input type="email" name="email" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="input-box">
+                            <label>Senha</label>
+                            <input type="password" name="password"  placeholder="Digite sua senha" required>
+                        </div>
+                        <div class="continue-button">
+                        <button type="submit">Entrar</button>
+                        </div>
+                    </div>    
+                </form>
+        </div>
+    </div>
           <!-- Janela cadastro-->
           <div class="janela-cadastro"
           id="janela-cadastro">    
@@ -175,33 +161,26 @@
         <div class="imagem-cabecalho">
             <img src="../img/init-imgs/supreme-nutrition-baner.png" alt="Descrição da imagem">
           </div>
-        <section>
-            <h2>Produtos</h2>
-            <ul class="redir-produtos"> <!-- espaço para redir pag produtos-->
-            </li>
-            <li>
-                <a href="creatin.html" id="img-creatina">
-                    <img src="../img/init-imgs/creatin-init.png" alt="imagem fundo preto, escrita creatina em verde, redireciona para pagina-creatin">
-                </a>
-            </li>
-                <li>
-                    <a href="pagina_whey.html">
-                        <img src="../img/init-imgs/whey-init.png" alt="imagem fundo preto, escrita WheyProtein em branco e verde, redireciona para pagina-WheyProtein">
-                    </a>
-                </li>
-                <li>
-                    <a href="pagina_pretreino.html">
-                        <img src="../img/init-imgs/pretreino-init.png" alt="imagem fundo preto, escrita Pre-Treino em branco e verde, redireciona para pagina de produtos-Pretreinos">
-                    </a>
-                </li>
-                <li>
-                    <a href="pagina_pretreino.html">
-                        <img src="../img/init-imgs/pretreino-init.png" alt="imagem fundo preto, escrita Pre-Treino em branco e verde, redireciona para pagina de produtos-Pretreinos">
-                    </a>
-                </li>
-                
-            </ul>
-        </section>
+          
+    <section class="align-boxes">
+       
+        
+        <div class="square-box" id="square-box" onclick="toggleBoxText()">
+            <h1 class="box-tittle" id="box-tittle" >CREATINA</h1>
+            <p class= box-text id="box-text">A creatina oferece
+                    a melhora do desempenho aeróbico e aceleração da recuperação muscular. Também contribui para o aumento da massa muscular e corporal total devido à retenção de água nos músculos.</p>
+        </div>
+        <div class="square-box" id="square-box"  >
+            <h1 class="box-tittle" id="box-tittle">WHEY PROTEIN</h1>
+            <p class= box-text id="box-text" >
+                Sua rápida absorção e digestão facilitam a recuperação muscular pós-treino. Além disso, o whey protein pode melhorar o desempenho físico e contribuir para a preservação da massa muscular durante a perda de peso.</p>
+        </div>
+        <div class="square-box" id="square-box">
+            <h1 class="box-tittle" id="box-tittle">PRÉ TREINO</h1>
+            <p class= box-text id="box-text">O pré-treino pode oferecer benefícios na musculação, como aumento da energia e do foco, o que pode melhorar o desempenho durante o treino, além de promover maior resistência muscular e auxiliar na recuperação pós-exercício.</p>
+        </div>
+           
+    </section>
         <div>
             <section class="texto-homepage">
                 <h1><b>Sobre a Empresa</b></h1>
@@ -219,6 +198,28 @@
 
 
         </div>
+
+    <!-- Carrocel -->
+        
+    <section class="alinhar-section">
+        <h2 >Parceiros</h2>
+        <div class="carrossel">
+            
+           <div class="alinha-logos"> 
+                <div class="logotipos">
+                <img src="../img/logo-parceiros/blackskull-logo.png" alt="Logo 1">
+                <img src="../img/logo-parceiros/darkeness-logo.png" alt="Logo 2">
+                <img src="../img/logo-parceiros/growth-logo.png" alt="Logo 3">
+                <img src="../img/logo-parceiros/hopper-logo.png" alt="Logo 4">
+                <img src="../img/logo-parceiros/im-logo.png" alt="Logo 5">
+                <img src="../img/logo-parceiros/probiotica-logo.png" alt="Logo 6">
+                <!-- Adicione mais imagens dos logotipos dos parceiros -->
+                </div>
+            </div>
+            
+          </div>
+          
+    </section>
 
  <!-- quem somos <3 -->
         <div class="quem-somos" id="quem-somos">
@@ -261,7 +262,7 @@
                         </ul>
                     </li>
                     <li>
-                        <h2>Daniel</h2>
+                        <h2>Fernando</h2>
                        <ul>
                                
                                <a class="remove-estilo" href="https://www.instagram.com/seu_usuario_do_instagram">

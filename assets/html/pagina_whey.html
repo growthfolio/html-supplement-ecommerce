@@ -21,42 +21,27 @@
           </form>
           
         
-        <nav class="dp-menu">
-            <ul >
-                <li>
-                    <a href="index.html">Início</a></li>
-                <li>
-                    <a href="index.html">Produtos</a>
-                    
+        <nav class="main-menu" id="nav">
+            <button id="btn-mobile">Menu
+                <span class="hamburger" id="hamburger"></span>
+            </button>         
+                       
+            
+            <ul id="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html">Produtos</a>                    
                     <ul>
-                        <li><a class="whey-page" href="pagina_whey.html">WheyProtein</a></li>
+                        <li><a class="whey-page" href="pagina_whey.html">Whey Protein</a></li>
                         <li><a class="creatin-page" href="creatin.html">Creatina</a></li>
-                        <li><a class="pret-page" href="pre_treino.html">Pre-Treino</a></li>
+                        <li><a class="pre-treino-page" href="pre_treino.html">Pré-Treino</a></li>
                     </ul>                   
                 </li>                  
-                <li><a href="#quem-somos" id="link-sobre-nos">Sobre Nós</a>
-                </li> 
-                                                             
-                
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <ul>
-                <li>
-                    <button class="singup-button" onclick="singup()">Cadastrar</button>
-                    
-                </li>
-                    <button class="login-button" onclick="toggleLogin()">Entrar</button>      
-                </li>
-            </ul>
-
-
-
-                
-        </nav>   
+                <li><a href="#quem-somos" id="link-sobre-nos">Sobre Nós</a></li>                                           
+                <li><button class="singup-button" onclick="singup()">Cadastrar</button></li>
+                <li><button class="login-button" onclick="toggleLogin()">Entrar</button></li>
+            </ul>           
+        </nav>
+          
           
       
     </header>
@@ -70,12 +55,13 @@
         <form action="#" class="login-form">
             <div class="form-login-header">
                 <div class="input-box">
-                    <input type="email" name="email" required>
                     <label>E-mail</label>
+                    <input type="email" name="email" placeholder="Digite seu email" required>
+                    
                 </div>
                 <div class="input-box">
-                    <input type="password" name="password" required>
                     <label>Senha</label>
+                    <input type="password" name="password"  placeholder="Digite sua senha" required>
                 </div>
                 <div class="continue-button">
                 <button type="submit">Entrar</button>
@@ -201,6 +187,36 @@
                     <img src="../img/wheys/whey_protein_blackskull.jpg" alt="WheyProtein blackskull 300g sem fundo">
                     <h3>WheyProtein Integralmedica 100%</h3>
                     <p>R$ 79,99</p>
+                    <button>Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    <img src="../img/wheys/morango.jpeg" alt="Morango 900g">
+                    <h3>WheyProtein Sabor Morango 900g</h3>
+                    <p>R$ 99,99</p>
+                    <button>Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    <img src="../img/wheys/chocolate.jpeg" alt="WheyProtein chocolate 900g">
+                    <h3>WheyProtein Sabor Chocolate 900g</h3>
+                    <p>R$ 78,99</p>
+                    <button>Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    <img src="../img/wheys/concentrado.jpeg" alt="Concentrado 900g">
+                    <h3>WheyProtein Concentrado 900g</h3>
+                    <p>R$ 119,99</p>
+                    <button>Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    <img src="../img/wheys/TOPWHEY.png" alt="TopWhey 3W">
+                    <h3>WheyProtein TopWhey 3W 900g</h3>
+                    <p>R$ 79,99</p>
+                    <button>Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    <img src="../img/wheys/morango.jpeg" alt="WheyProtein foods">
+                    <h3>WheyProtein Pink Foods</h3>
+                    <p>R$ 108,99</p>
                     <button>Adicionar ao Carrinho</button>
                 </li>
             </ul>
