@@ -1,26 +1,29 @@
-<!-- Arquivo para testes-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Supreme-Nutrition - Sua Loja de Suplementos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <script src="..//js/script.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
   
 </head>
 <body>
     <header class="cabecalho">
-        <div class="tituloheader">
-            <img src="../img/init-imgs/sn-navbar.png" alt="">
-        </div>
-        <form class="barra-pesquisa" action="#" method="get">
-            <input type="text" name="search" placeholder="Pesquisar...">
-            <button class="search-button" type="submit">Buscar</button>
-          </form>
-          
         
+        <div class="tituloheader">
+           <button class="button-img" href="index.html"> <img src="../img/init-imgs/sn-navbar.png" alt=""></button>
+        </div>
+        <div class="alinhar-pesquisa">
+            <form class="barra-pesquisa" action="#" method="get">
+                <input type="text" name="search" placeholder="Buscar">
+                <button class="search-button" type="submit"><span class="material-symbols-outlined" id="lupa-pesquisar">search</span>
+                </button>
+            </form>         
+        </div>
         <nav class="main-menu" id="nav">
             <button id="btn-mobile">Menu
                 <span class="hamburger" id="hamburger"></span>
@@ -29,12 +32,9 @@
             
             <ul id="menu">
                 <li><a href="index.html">Início</a></li>
-                <li><a href="index.html">Produtos</a>                    
-                    <ul>
-                        <li><a class="whey-page" href="pagina_whey.html">Whey Protein</a></li>
-                        <li><a class="creatin-page" href="creatin.html">Creatina</a></li>
-                        <li><a class="pre-treino-page" href="pre_treino.html">Pré-Treino</a></li>
-                    </ul>                   
+                <li><a class="whey-page" href="pagina_whey.html">Whey Protein</a></li>
+                <li><a class="creatin-page" href="creatin.html">Creatina</a></li>
+                <li><a class="pre-treino-page" href="pre_treino.html">Pré-Treino</a></li>                  
                 </li>                  
                 <li><a href="#quem-somos" id="link-sobre-nos">Sobre Nós</a></li>                                           
                 <li><button class="singup-button" onclick="singup()">Cadastrar</button></li>
@@ -181,18 +181,17 @@
         </div>
            
     </section>
-        <div>
+        <div class="fundo-texto">
             <section class="texto-homepage">
                 <h1><b>Sobre a Empresa</b></h1>
-                <h3> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat quidem id doloribus nihil fugiat asperiores rerum perferendis minus quod vero? Totam voluptas, accusantium quis labore officia nemo dolores nam molestiae
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat quidem id doloribus nihil fugiat asperiores rerum perferendis minus quod vero? Totam voluptas, accusantium quis labore officia nemo dolores nam molestiae
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat quidem id doloribus nihil fugiat asperiores rerum perferendis minus quod vero? Totam voluptas, accusantium quis labore officia nemo dolores nam molestiae
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat quidem id doloribus nihil fugiat asperiores rerum perferendis minus quod vero? Totam voluptas, accusantium quis labore officia nemo dolores nam molestiae
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat quidem id doloribus nihil fugiat asperiores rerum perferendis minus quod vero? Totam voluptas, accusantium quis labore officia nemo dolores nam molestiae
-                    
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat quidem id doloribus nihil fugiat asperiores rerum perferendis minus quod vero? Totam voluptas, accusantium quis labore officia nemo dolores nam molestiae..
-                </h3>
-
+        <div class="stile-text-box">
+            <h3> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat quidem id doloribus nihil fugiat asperiores rerum perferendis minus quod vero? Totam voluptas, accusantium quis labore officia nemo dolores nam molestiae
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat quidem id doloribus nihil fugiat asperiores rerum perferendis minus quod vero? Totam voluptas, accusantium quis labore officia nemo dolores nam molestiae
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat quidem id doloribus nihil fugiat asperiores rerum perferendis minus quod vero? Totam voluptas, accusantium quis labore officia nemo dolores nam molest
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat quidem id doloribus nihil fugiat asperiores rerum perferendis minus quod vero? Totam voluptas, accusantium quis labore officia nemo dolores nam molestiae..
+                
+            </h3>
+        </div>
             </section>
 
 
@@ -207,13 +206,12 @@
             
            <div class="alinha-logos"> 
                 <div class="logotipos">
-                <img src="../img/logo-parceiros/blackskull-logo.png" alt="Logo 1">
-                <img src="../img/logo-parceiros/darkeness-logo.png" alt="Logo 2">
-                <img src="../img/logo-parceiros/growth-logo.png" alt="Logo 3">
-                <img src="../img/logo-parceiros/hopper-logo.png" alt="Logo 4">
-                <img src="../img/logo-parceiros/im-logo.png" alt="Logo 5">
-                <img src="../img/logo-parceiros/probiotica-logo.png" alt="Logo 6">
-                <!-- Adicione mais imagens dos logotipos dos parceiros -->
+                    <img src="../img/logo-parceiros/blackskull-logo.png" alt="Logo 1">
+                    <img src="../img/logo-parceiros/darkeness-logo.png" alt="Logo 2">
+                    <img src="../img/logo-parceiros/growth-logo.png" alt="Logo 3">
+                    <img src="../img/logo-parceiros/hopper-logo.png" alt="Logo 4">
+                    <img src="../img/logo-parceiros/im-logo.png" alt="Logo 5">
+                    <img src="../img/logo-parceiros/probiotica-logo.png" alt="Logo 6">
                 </div>
             </div>
             

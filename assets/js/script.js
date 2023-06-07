@@ -33,7 +33,6 @@ function closesingup() {
 const brnMobile = document.getElementById('btn-mobile');
 
 function toggleMenu(event) {
-
 const nav = document.getElementById('nav');
 nav.classList.toggle('active');
 }
