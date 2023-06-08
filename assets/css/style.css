@@ -583,26 +583,14 @@
 /* Fim edição das boxes */
 
 /* Estilos CSS */
-.caixa-redes {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    margin-right: 50px;
-    list-style: none;
-}
-.caixa-redes li {
-    width: calc(33.33% - 5px);
-    margin-bottom: 20px;
-    padding: 5px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: auto rgba(0, 0, 0, 0.753);
-    margin-left: 55px ;
-    
-}
+
+
+
+
+
 
 .stile-text-box {
- background-color: #dadada2f;
+ background-color: #20202009;
  height: 350px;
  border-radius: 15px;
  margin: 1%;
@@ -626,46 +614,130 @@
   
 }
 
+/*Estilos para quem-somos*/
+.button-img {
+background-color: white;
+width: 10px;
+height: 10px;
 
-/*Estilos icones redes*/
-
-.remove-estilo{
-  text-decoration: none;
 }
-.social-icon {
-  display: inline-block;
-  vertical-align: middle;
+
+.container-card {
   
+  margin-top: 45px;
+  width: auto;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) ;
+  justify-content: center;
+  margin-bottom: 30px;
+  background-color: #20202009 ;
+  border-radius: 45px;
 }
 
-.instagram {
-  background-image: url('../img/init-imgs/insta-gif.gif');
-  width: 50px; 
-  height: 50px;
-  
-}
-.github {
-  background-image: url('../img/init-imgs/gif-hub.gif');
-  width: 50px; 
-  height: 50px;
-  
+.card {
+  width: 220px;
+  height: 350px;
+  border-radius: 15px;
+  margin-top: 50px;
+  background-color: #202020;
+  margin: auto; 
+  transition: transform 0.2s ease-in-out;
+
 }
 
-.handle {
-  display: inline-block;
-  margin-left: 10px; 
-  vertical-align: middle;
-  text-decoration: none; 
-  font-weight: bold; 
-  color: black;
+.card:hover {
+  transform: translateY(-5px);
+
 }
-.git-handle{
-  display: inline-block;
-  margin-left: 10px; 
-  vertical-align: middle;
-  text-decoration: none; 
-  font-weight: bold; 
-  color: black;
+
+.mar {
+  display: block;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: -48px;
+  color: #000000;
+
+}
+
+.button-card-div i {
+  font-size: 30px;
+
+}
+
+#btn-face {
+  color: #ffffff;
+  background-color: #3b5998 ;
+  border-radius: 4px; 
+
+}
+
+#btn-gmail {
+  color: #c50e0e;
+  background-color: #ffffff ;
+  border-radius: 4px;
+
+}
+
+#btn-github {
+  color: #000000;
+  background-color: #ffffff ;
+  border-radius: 4px;
+
+}
+
+.button-card-div { 
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+ 
+}
+
+.button-card-div a {
+  border: none; 
+  cursor: pointer;
+  background: none;
+  transition: transform 0.2s ease-in-out;
+  
+
+}
+
+.button-card-div a:hover {
+  transform: translateY(-2px);
+}
+
+
+.text-main {
+text-align: center;
+color: #fff;
+font-weight: 600;
+font-size: 25px;
+font-family: 'inter', sans-serif;
+
+}
+
+.desc {
+font-family: 'inter', sans-serif;
+color: #fff;
+font-weight: 200;
+text-align: center;
+font-size: 15px;
+margin-top: 25px;
+
+}
+
+.texto { 
+  margin-top: 10px;
+
+}
+
+.quem-somos {
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  margin-top: 45px;
 }
 
 
@@ -832,7 +904,6 @@ label,input {
 .janela-cadastro {
   display: none;
   position: fixed;
-  
   justify-content: center;
   align-items: center;
   z-index: 5000;
@@ -857,9 +928,6 @@ label,input {
   margin-bottom: 10%;
 
 }
-
-
-
 
 .form {
   width: 50%;
@@ -1116,16 +1184,19 @@ label,input {
 /*Carrossel styles*/
 
 .alinhar-section h2{
-  font-size: medium;
+  font-size:larger;
+  margin-bottom: 15px;
+
 }
 
 .alinhar-section {
-  background-color: rgba(255, 255, 255, 0.5);;
+  background-color: rgba(255, 255, 255, 0.5);
   margin-left: 30%;
   margin-right: 30%;
+  margin-bottom: 2%;
   position: relative;
   overflow: hidden;
-  margin-bottom: 2%;
+  
 }
 
 .carrossel {
