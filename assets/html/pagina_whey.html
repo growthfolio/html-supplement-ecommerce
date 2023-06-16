@@ -70,95 +70,83 @@
             </div>    
         </form>
 </div>
-          <!-- Janela cadastro-->
-          <div class="janela-cadastro"
-          id="janela-cadastro">    
-              <section class="center-style">
-                  <div class="container">
-                      
-                      <div class="form">
-                          <form action="#">
-                              <div class="form-header">
-                                  <div class="title">
-                                      <h1>Cadastre-se</h1>
-                                  </div>
-                                                              
-                                      <div class="close-button" id="close-button">
-                                          <button><i class="fas fa-times"></i></button>
-                                      </div> 
-                                                      
-                              </div>
-  
-                              <div class="input-group">
-                                  <div class="input-box">
-                                      <label for="firstname">Primeiro Nome</label>
-                                      <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
-                                  </div>
-  
-                                  <div class="input-box">
-                                      <label for="lastname">Sobrenome</label>
-                                      <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
-                                  </div>
-                                  <div class="input-box">
-                                      <label for="email">E-mail</label>
-                                      <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
-                                  </div>
-  
-                                  <div class="input-box">
-                                      <label for="number">Celular</label>
-                                      <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
-                                  </div>
-  
-                                  <div class="input-box">
-                                      <label for="password">Senha</label>
-                                      <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
-                                  </div>
-  
-  
-                                  <div class="input-box">
-                                      <label for="confirmPassword">Confirme sua Senha</label>
-                                      <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
-                                  </div>
-  
-                              </div>
-  
-                              <div class="gender-inputs">
-                                  <div class="gender-title">
-                                      <h6>Gênero</h6>
-                                  </div>
-  
-                                  <div class="gender-group">
-                                      <div class="gender-input">
-                                          <input id="female" type="radio" name="gender">
-                                          <label for="female">Feminino</label>
-                                      </div>
-  
-                                      <div class="gender-input">
-                                          <input id="male" type="radio" name="gender">
-                                          <label for="male">Masculino</label>
-                                      </div>
-  
-                                      <div class="gender-input">
-                                          <input id="others" type="radio" name="gender">
-                                          <label for="others">Outros</label>
-                                      </div>
-  
-                                      <div class="gender-input">
-                                          <input id="none" type="radio" name="gender">
-                                          <label for="none">Prefiro não dizer</label>
-                                      </div>
-                                  </div>
-                              </div>
-  
-                              <div class="continue-button">
-                                  <button><a href="index.html">Continuar</a> </button>
-                              </div>
-                          </form>
-                      </div>
-                  </div>
-                      
-              </section>
-          </div>
+<!-- Janela cadastro -->
+<div class="janela-cadastro" id="janela-cadastro">
+<section class="center-style">
+    <div class="container">
+    <div class="form">
+        <form id="form" action="#">
+        <div class="form-header">
+            <div class="title">
+            <h1>Cadastre-se</h1>
+            </div>
+            <div class="close-button" id="close-button">
+            <button><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="input-box">
+            <label for="firstname">Primeiro Nome</label>
+            <input id="firstname" type="text" name="firstname" class="inputs required" oninput="nameValidate()" placeholder="Digite seu primeiro nome" required >
+            <span id="firstname-helper" class="helper-text">Este campo é obrigatório</span>
+            </div>
+            <div class="input-box">
+            <label for="lastname">Sobrenome</label>
+            <input id="lastname" type="text" name="lastname" class="inputs required" oninput="lastNameValidate()" placeholder="Digite seu sobrenome" required>
+            <span id="lastname-helper" class="helper-text">Este campo é obrigatório</span>
+            </div>
+            <div class="input-box">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" name="email" class="inputs required" oninput="emailValidate()" placeholder="Digite seu e-mail" required>
+            <span id="email-helper" class="helper-text">O endereço de e-mail é inválido.</span>
+            </div>
+            <div class="input-box">
+            <label for="number">Celular</label>
+            <input id="number" type="tel" name="number" class="inputs required" placeholder="(xx) xxxx-xxxx" required>
+            <span id="number-helper" class="helper-text">Por favor, digite um número valido</span> 
+            </div>
+            <div class="input-box">
+            <label for="password">Senha (8 ou mais Digitos)</label>
+            <input id="password" type="password" name="password" class="inputs required" oninput="mainPasswordValidate()" placeholder="Digite sua senha" required>
+            <span id="password-helper" class="helper-text">A Senha não possui os requisitos de complexidade</span>
+            </div>
+            <div class="input-box">
+            <label for="confirmPassword">Confirme sua Senha</label>
+            <input id="confirmPassword" type="password" name="confirmPassword" class="inputs required" oninput="comparePassword()" placeholder="Digite sua senha novamente" required>
+            <span id="confirmPassword-helper" class="helper-text">As senhas não combinam</span>
+            </div>
+        </div>
+        <div class="gender-inputs">
+            <div class="gender-title">
+            <h6>Gênero</h6>
+            </div>
+            <div class="gender-group">
+            <div class="gender-input">
+                <input id="female" type="radio" name="gender">
+                <label for="female">Feminino</label>
+            </div>
+            <div class="gender-input">
+                <input id="male" type="radio" name="gender">
+                <label for="male">Masculino</label>
+            </div>
+            <div class="gender-input">
+                <input id="others" type="radio" name="gender">
+                <label for="others">Outros</label>
+            </div>
+            <div class="gender-input">
+                <input id="none" type="radio" name="gender">
+                <label for="none">Prefiro não dizer</label>
+            </div>
+            </div>
+        </div>
+        <div class="continue-button">
+            <button><a href="index.html">Continuar</a> </button>
+        </div>
+        </form>
+    </div>
+    </div>
+</section>
+</div>
         <div class="imagem-cabecalho">
             <img src="../img/init-imgs/supreme-nutrition-baner.png" alt="Descrição da imagem">
           </div>

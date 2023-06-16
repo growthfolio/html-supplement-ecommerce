@@ -1,3 +1,11 @@
+// Declaração de var para validação form cadsastro linha 91
+const form = document.getElementById('form');
+let campos = document.querySelectorAll('.required');
+const spans = document.querySelectorAll('.helper-text');
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+
+
 //altera o display do form cadastro
 
 function singup() {
@@ -27,11 +35,10 @@ function closesingup() {
   }
 }
 
-//LEMBRAR DE FAZER O BOTÃO DE FECHAR xD
 
 // MENU HAMBURGER
 const brnMobile = document.getElementById('btn-mobile');
-
+let menuItems = document.querySelectorAll('#li-button');
 function toggleMenu(event) {
 const nav = document.getElementById('nav');
 nav.classList.toggle('active');
@@ -39,6 +46,11 @@ nav.classList.toggle('active');
 
 brnMobile.addEventListener('click', toggleMenu);
 brnMobile.addEventListener('touchstart', toggleMenu);
+menuItems.forEach(item => {
+  item.addEventListener('click', toggleMenu);
+  item.addEventListener('touchstart', toggleMenu);
+});
+
 
 
 // EVENTO CLIQUE PARA CAIXAS PAG INI
@@ -87,3 +99,79 @@ function verificarEspaco() {
   }
 }
 
+
+    // ---------------Validação de Formulario Cadastro-------------//
+
+  function setError(index) {
+    campos[index].style.border = '2px solid #e63636';
+    spans[index].style.display = 'block';
+
+  } 
+  
+  function removeError(index) {
+  campos[index].style.border = '2px solid #3f9136';
+  spans[index].style.display = 'none';
+
+  }
+
+
+  function nameValidate() {
+      if(campos[0].value.length <2)
+      {
+          setError(0);
+      }    
+      else
+      {
+          removeError(0);
+          
+          
+      }
+  }
+
+  function lastNameValidate() {
+    if(campos[1].value.length <2)
+    {
+        setError(1);
+    }    
+    else
+    {
+        removeError(1);
+        
+        
+    }
+  }
+
+  function emailValidate(){
+    if(!emailRegex.test(campos[2].value))
+    {
+      setError(2);
+    }
+    else
+    {
+      removeError(2);
+    }
+  }
+
+  function mainPasswordValidate() {
+    if(campos[4].value.length < 8)
+    {
+      setError(4);
+    }
+    else
+    {
+      removeError(4);
+      comparePassword();
+    }
+  }
+  
+  function comparePassword() {
+    if (campos[4].value == campos[5].value && campos[5].value.length >=8)
+      {
+        removeError(5);
+      }
+      else
+      {
+        setError(5);
+      }
+
+    }
