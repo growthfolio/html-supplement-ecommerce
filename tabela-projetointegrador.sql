@@ -20,16 +20,6 @@ SET default_tablespace = '';
 
 SET default_table_access_method = heap;
 
---
--- Name: demo; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.demo (
-    id integer NOT NULL,
-    name character varying(200) DEFAULT ''::character varying NOT NULL,
-    hint text DEFAULT ''::text NOT NULL
-);
-
 
 --
 -- Name: demo_id_seq; Type: SEQUENCE; Schema: public; Owner: -
