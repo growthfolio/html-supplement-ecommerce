@@ -38,7 +38,7 @@ Este projeto proporcionou uma sólida compreensão de como criar um e-commerce f
 
 1. Clone este repositório para a sua máquina local:
     ```bash
-    git clone https://github.com/seuusuario/supreme-nutrition.git
+    git clone https://github.com/felipemacedo1/supreme-nutrition.git
     ```
 2. Navegue até o diretório do projeto:
     ```bash
