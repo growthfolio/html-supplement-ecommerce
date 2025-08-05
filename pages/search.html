@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resultados da busca - Supreme Nutrition">
+    <meta name="author" content="Supreme Nutrition">
+    
+    <title>Busca - Supreme Nutrition</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__container">
+                <!-- Logo -->
+                <div class="header__logo">
+                    <a href="../index.html" class="logo" aria-label="Supreme Nutrition - Página Inicial">
+                        <span class="material-symbols-outlined logo__icon">fitness_center</span>
+                        <div class="logo__text">
+                            <span class="logo__main">SupremeNutrition</span>
+                            <span class="logo__sub">Suplementos</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Search -->
+                <div class="header__search">
+                    <form class="search" role="search" aria-label="Buscar produtos">
+                        <input 
+                            type="search" 
+                            class="search__input" 
+                            placeholder="Buscar produtos..." 
+                            aria-label="Campo de busca"
+                            autocomplete="off"
+                            id="search-input"
+                        >
+                        <button type="submit" class="search__button" aria-label="Buscar">
+                            <span class="material-symbols-outlined">search</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav" role="navigation" aria-label="Menu principal">
+                    <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+                        <span class="nav__toggle-line"></span>
+                        <span class="nav__toggle-line"></span>
+                        <span class="nav__toggle-line"></span>
+                    </button>
+                    
+                    <ul class="nav__list">
+                        <li><a href="../index.html" class="nav__link">Início</a></li>
+                        <li><a href="whey.html" class="nav__link">Whey Protein</a></li>
+                        <li><a href="creatina.html" class="nav__link">Creatina</a></li>
+                        <li><a href="pre-treino.html" class="nav__link">Pré-Treino</a></li>
+                        <li><a href="../index.html#about" class="nav__link">Sobre Nós</a></li>
+                        <li><button class="nav__button nav__button--outline" data-modal-target="register-modal">Cadastrar</button></li>
+                        <li><button class="nav__button" data-modal-target="login-modal">Entrar</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Search Results Section -->
+        <section class="section">
+            <div class="container">
+                <div class="search-page-results" id="search-results">
+                    <!-- Results will be loaded here -->
+                    <div class="search-page__header">
+                        <h1>Buscar produtos</h1>
+                        <p>Digite algo no campo de busca acima</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <nav class="footer__links" aria-label="Links do rodapé">
+                    <a href="#" class="footer__link">Política de Privacidade</a>
+                    <a href="#" class="footer__link">Termos de Uso</a>
+                    <a href="#" class="footer__link">FAQ</a>
+                    <a href="#" class="footer__link">Contato</a>
+                </nav>
+                <p class="footer__copyright">
+                    &copy; 2024 Supreme Nutrition - Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module">
+        import { searchProducts } from '../assets/js/data/products.js';
+        
+        // Load search results from URL or sessionStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q') || sessionStorage.getItem('searchQuery') || '';
+            const searchInput = document.getElementById('search-input');
+            const resultsContainer = document.getElementById('search-results');
+            
+            if (query) {
+                searchInput.value = query;
+                performSearch(query, resultsContainer);
+            }
+        });
+        
+        function performSearch(query, container) {
+            const products = searchProducts(query);
+            
+            if (products.length === 0) {
+                container.innerHTML = `
+                    <div class="search-page__header">
+                        <h1>Nenhum resultado encontrado</h1>
+                        <p>Não encontramos produtos para "${query}"</p>
+                    </div>
+                    <div class="search-suggestions">
+                        <h3>Tente buscar por:</h3>
+                        <div class="search-suggestions__list">
+                            <a href="whey.html" class="btn btn--outline">Whey Protein</a>
+                            <a href="creatina.html" class="btn btn--outline">Creatina</a>
+                            <a href="pre-treino.html" class="btn btn--outline">Pré-Treino</a>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = `
+                <div class="search-page__header">
+                    <h1>Resultados para "${query}"</h1>
+                    <p>${products.length} produto(s) encontrado(s)</p>
+                </div>
+                <div class="products-grid">
+                    ${products.map(product => {
+                        const badge = product.badge ? `<div class="product-card__badge product-card__badge--${product.badge}">${product.badge === 'sale' ? 'Oferta' : 'Novo'}</div>` : '';
+                        const originalPrice = product.originalPrice ? `<span class="product-card__price--old">R$ ${product.originalPrice.toFixed(2).replace('.', ',')}</span>` : '';
+                        
+                        return `
+                            <article class="card product-card hover-lift">
+                                ${badge}
+                                <img 
+                                    src="../${product.image}" 
+                                    alt="${product.name}" 
+                                    class="card__image product-card__image"
+                                    loading="lazy"
+                                >
+                                <div class="card__content product-card__content">
+                                    <h3 class="card__title product-card__title">${product.name}</h3>
+                                    <div class="card__price product-card__price">
+                                        ${originalPrice}
+                                        R$ ${product.price.toFixed(2).replace('.', ',')}
+                                    </div>
+                                    <div class="card__actions product-card__actions">
+                                        <button class="btn btn--primary add-to-cart btn-ripple tooltip" data-product-id="${product.id}">
+                                            <span class="material-symbols-outlined">shopping_cart</span>
+                                            Adicionar ao Carrinho
+                                            <div class="tooltip__content">Clique para adicionar ao carrinho</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+        }
+    </script>
+    <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

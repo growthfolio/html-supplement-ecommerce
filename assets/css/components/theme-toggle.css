@@ -1,0 +1,73 @@
+/* Theme Toggle Component */
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.theme-toggle__switch {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  background-color: var(--color-border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.theme-toggle__switch::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.theme-toggle__switch--active {
+  background-color: var(--color-primary);
+}
+
+.theme-toggle__switch--active::before {
+  transform: translateX(26px);
+}
+
+.theme-toggle__icon {
+  font-size: 18px;
+  color: var(--color-text-light);
+  transition: color var(--transition-fast);
+}
+
+.theme-toggle__icon--active {
+  color: var(--color-primary);
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+  --color-background: #1a1a1a;
+  --color-surface: #2d2d2d;
+  --color-text: #ffffff;
+  --color-text-light: #b3b3b3;
+  --color-border: #404040;
+  --color-secondary: #333333;
+}
+
+[data-theme="dark"] .header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .modal__content {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+}

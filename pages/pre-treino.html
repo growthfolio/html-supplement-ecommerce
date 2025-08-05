@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pré-Treino - Supreme Nutrition. Os melhores pré-treinos do mercado com preços imperdíveis. Darkness, Growth, Black Skull e mais.">
+    <meta name="keywords" content="pré-treino, pre workout, suplementos, energia, foco, darkness, growth, black skull">
+    <meta name="author" content="Supreme Nutrition">
+    
+    <title>Pré-Treino - Supreme Nutrition | Melhores Preços</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__container">
+                <!-- Logo -->
+                <div class="header__logo">
+                    <a href="../index.html" class="logo" aria-label="Supreme Nutrition - Página Inicial">
+                        <span class="material-symbols-outlined logo__icon">fitness_center</span>
+                        <div class="logo__text">
+                            <span class="logo__main">SupremeNutrition</span>
+                            <span class="logo__sub">Suplementos</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Search -->
+                <div class="header__search">
+                    <form class="search" role="search" aria-label="Buscar produtos">
+                        <input 
+                            type="search" 
+                            class="search__input" 
+                            placeholder="Buscar pré-treinos..." 
+                            aria-label="Campo de busca"
+                            autocomplete="off"
+                        >
+                        <button type="submit" class="search__button" aria-label="Buscar">
+                            <span class="material-symbols-outlined">search</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav" role="navigation" aria-label="Menu principal">
+                    <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+                        <span class="nav__toggle-line"></span>
+                        <span class="nav__toggle-line"></span>
+                        <span class="nav__toggle-line"></span>
+                    </button>
+                    
+                    <ul class="nav__list">
+                        <li><a href="../index.html" class="nav__link">Início</a></li>
+                        <li><a href="whey.html" class="nav__link">Whey Protein</a></li>
+                        <li><a href="creatina.html" class="nav__link">Creatina</a></li>
+                        <li><a href="pre-treino.html" class="nav__link nav__link--active">Pré-Treino</a></li>
+                        <li><a href="../index.html#about" class="nav__link">Sobre Nós</a></li>
+                        <li><button class="nav__button nav__button--outline" data-modal-target="register-modal">Cadastrar</button></li>
+                        <li><button class="nav__button" data-modal-target="login-modal">Entrar</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <img 
+                src="../assets/img/init-imgs/supreme-nutrition-baner.png" 
+                alt="Supreme Nutrition - Pré-Treino" 
+                class="hero__image"
+                loading="eager"
+            >
+        </section>
+
+        <!-- Category Header -->
+        <section class="section">
+            <div class="container">
+                <div class="category-header">
+                    <h1 class="category-title">Pré-Treino</h1>
+                    <p class="category-description">
+                        Descubra nossa seleção premium de pré-treinos das melhores marcas do mercado. 
+                        Fórmulas avançadas com cafeína, beta-alanina e outros ingredientes para 
+                        maximizar sua energia, foco e performance nos treinos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="section section--gray">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Produtos em Destaque</h2>
+                </div>
+                
+                <!-- Product Grid -->
+                <div class="products-grid" id="products-container">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <nav class="footer__links" aria-label="Links do rodapé">
+                    <a href="#" class="footer__link">Política de Privacidade</a>
+                    <a href="#" class="footer__link">Termos de Uso</a>
+                    <a href="#" class="footer__link">FAQ</a>
+                    <a href="#" class="footer__link">Contato</a>
+                </nav>
+                <p class="footer__copyright">
+                    &copy; 2024 Supreme Nutrition - Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal" data-modal role="dialog" aria-labelledby="login-title" aria-hidden="true">
+        <div class="modal__content modal__content--sm">
+            <div class="modal__header">
+                <h2 id="login-title" class="modal__title">Entrar</h2>
+                <button class="modal__close" data-modal-close aria-label="Fechar modal">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="modal__body">
+                <form class="form" id="login-form">
+                    <div class="form__group">
+                        <label for="login-email" class="form__label form__label--required">E-mail</label>
+                        <input 
+                            type="email" 
+                            id="login-email" 
+                            class="form__input" 
+                            placeholder="Digite seu e-mail"
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+                    <div class="form__group">
+                        <label for="login-password" class="form__label form__label--required">Senha</label>
+                        <input 
+                            type="password" 
+                            id="login-password" 
+                            class="form__input" 
+                            placeholder="Digite sua senha"
+                            required
+                            autocomplete="current-password"
+                        >
+                    </div>
+                    <div class="form__actions form__actions--full">
+                        <button type="submit" class="btn btn--primary btn--full">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="modal" data-modal role="dialog" aria-labelledby="register-title" aria-hidden="true">
+        <div class="modal__content modal__content--md">
+            <div class="modal__header">
+                <h2 id="register-title" class="modal__title">Cadastre-se</h2>
+                <button class="modal__close" data-modal-close aria-label="Fechar modal">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="modal__body">
+                <form class="form" id="register-form">
+                    <div class="form__grid form__grid--2">
+                        <div class="form__group">
+                            <label for="register-firstname" class="form__label form__label--required">Primeiro Nome</label>
+                            <input 
+                                type="text" 
+                                id="register-firstname" 
+                                class="form__input" 
+                                placeholder="Digite seu primeiro nome"
+                                required
+                                autocomplete="given-name"
+                            >
+                            <span class="form__error" id="firstname-error"></span>
+                        </div>
+                        <div class="form__group">
+                            <label for="register-lastname" class="form__label form__label--required">Sobrenome</label>
+                            <input 
+                                type="text" 
+                                id="register-lastname" 
+                                class="form__input" 
+                                placeholder="Digite seu sobrenome"
+                                required
+                                autocomplete="family-name"
+                            >
+                            <span class="form__error" id="lastname-error"></span>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label for="register-email" class="form__label form__label--required">E-mail</label>
+                        <input 
+                            type="email" 
+                            id="register-email" 
+                            class="form__input" 
+                            placeholder="Digite seu e-mail"
+                            required
+                            autocomplete="email"
+                        >
+                        <span class="form__error" id="email-error"></span>
+                    </div>
+                    <div class="form__group">
+                        <label for="register-phone" class="form__label">Telefone</label>
+                        <input 
+                            type="tel" 
+                            id="register-phone" 
+                            class="form__input" 
+                            placeholder="(11) 99999-9999"
+                            autocomplete="tel"
+                        >
+                        <span class="form__error" id="phone-error"></span>
+                    </div>
+                    <div class="form__grid form__grid--2">
+                        <div class="form__group">
+                            <label for="register-password" class="form__label form__label--required">Senha</label>
+                            <input 
+                                type="password" 
+                                id="register-password" 
+                                class="form__input" 
+                                placeholder="Mínimo 8 caracteres"
+                                required
+                                autocomplete="new-password"
+                            >
+                            <span class="form__error" id="password-error"></span>
+                        </div>
+                        <div class="form__group">
+                            <label for="register-confirm-password" class="form__label form__label--required">Confirmar Senha</label>
+                            <input 
+                                type="password" 
+                                id="register-confirm-password" 
+                                class="form__input" 
+                                placeholder="Digite a senha novamente"
+                                required
+                                autocomplete="new-password"
+                            >
+                            <span class="form__error" id="confirm-password-error"></span>
+                        </div>
+                    </div>
+                    <div class="form__actions form__actions--full">
+                        <button type="submit" class="btn btn--primary btn--full">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module">
+        import { getProductsByCategory } from '../assets/js/data/products.js';
+        
+        // Load products when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('products-container');
+            const products = getProductsByCategory('preTreino');
+            
+            container.innerHTML = products.map(product => {
+                const badge = product.badge ? `<div class="product-card__badge product-card__badge--${product.badge}">${product.badge === 'sale' ? 'Oferta' : 'Novo'}</div>` : '';
+                const originalPrice = product.originalPrice ? `<span class="product-card__price--old">R$ ${product.originalPrice.toFixed(2).replace('.', ',')}</span>` : '';
+                
+                return `
+                    <article class="card product-card hover-lift">
+                        ${badge}
+                        <img 
+                            src="../${product.image}" 
+                            alt="${product.name}" 
+                            class="card__image product-card__image"
+                            loading="lazy"
+                        >
+                        <div class="card__content product-card__content">
+                            <h3 class="card__title product-card__title">${product.name}</h3>
+                            <div class="card__price product-card__price">
+                                ${originalPrice}
+                                R$ ${product.price.toFixed(2).replace('.', ',')}
+                            </div>
+                            <div class="card__actions product-card__actions">
+                                <button class="btn btn--primary add-to-cart btn-ripple tooltip" data-product-id="${product.id}">
+                                    <span class="material-symbols-outlined">shopping_cart</span>
+                                    Adicionar ao Carrinho
+                                    <div class="tooltip__content">Clique para adicionar ao carrinho</div>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        });
+    </script>
+    <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

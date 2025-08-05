@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Supreme Nutrition - Sua loja especializada em suplementos alimentares. Whey Protein, Creatina, Pré-Treino e muito mais com os melhores preços.">
+    <meta name="keywords" content="suplementos, whey protein, creatina, pré-treino, nutrição esportiva, musculação">
+    <meta name="author" content="Supreme Nutrition">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Supreme Nutrition - Suplementos Alimentares">
+    <meta property="og:description" content="Sua loja especializada em suplementos alimentares com os melhores preços e qualidade.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supremenutrition.com.br">
+    <meta property="og:image" content="assets/img/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    
+    <title>Supreme Nutrition - Suplementos Alimentares | Whey, Creatina, Pré-Treino</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <!-- Logo -->
+            <div class="header__logo">
+                <a href="index.html" class="logo" aria-label="Supreme Nutrition - Página Inicial">
+                    <span class="material-symbols-outlined logo__icon">fitness_center</span>
+                    <div class="logo__text">
+                        <span class="logo__main">SupremeNutrition</span>
+                        <span class="logo__sub">Suplementos</span>
+                    </div>
+                </a>
+            </div>
+            
+            
+            <!-- Actions -->
+            <div class="header__actions">
+                <nav class="nav" role="navigation" aria-label="Menu principal">
+                    <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+                        <span class="nav__toggle-line"></span>
+                        <span class="nav__toggle-line"></span>
+                        <span class="nav__toggle-line"></span>
+                    </button>
+                    
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link nav__link--active">Início</a></li>
+                        <li class="nav__item"><a href="pages/whey.html" class="nav__link">Whey Protein</a></li>
+                        <li class="nav__item"><a href="pages/creatina.html" class="nav__link">Creatina</a></li>
+                        <li class="nav__item"><a href="pages/pre-treino.html" class="nav__link">Pré-Treino</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">Sobre Nós</a></li>
+                        <li class="nav__item"><button class="nav__button nav__button--outline" data-modal-target="register-modal">Cadastrar</button></li>
+                        <li class="nav__item"><button class="nav__button" data-modal-target="login-modal">Entrar</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="hero home-hero">
+            <img 
+                src="assets/img/init-imgs/supreme-nutrition-baner.png" 
+                alt="Supreme Nutrition - Sua loja de suplementos" 
+                class="hero__image"
+                loading="eager"
+            >
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about home-about">
+            <div class="container">
+                <div class="section__header">
+                    <h1 class="section__title">Sobre a Supreme Nutrition</h1>
+                    <div class="section__divider"></div>
+                </div>
+                
+                <!-- Mission & Vision -->
+                <div class="about__mission-vision">
+                    <div class="mission-vision-grid">
+                        <div class="mission-card">
+                            <div class="mission-card__icon">
+                                <span class="material-symbols-outlined">target</span>
+                            </div>
+                            <h3 class="mission-card__title">Nossa Missão</h3>
+                            <p class="mission-card__text">
+                                Fornecer suplementos de alta qualidade que potencializem os resultados dos nossos clientes, 
+                                contribuindo para uma vida mais saudável e ativa.
+                            </p>
+                        </div>
+                        
+                        <div class="mission-card">
+                            <div class="mission-card__icon">
+                                <span class="material-symbols-outlined">visibility</span>
+                            </div>
+                            <h3 class="mission-card__title">Nossa Visão</h3>
+                            <p class="mission-card__text">
+                                Ser a referência nacional em suplementos alimentares, reconhecida pela excelência 
+                                em produtos e atendimento ao cliente.
+                            </p>
+                        </div>
+                        
+                        <div class="mission-card">
+                            <div class="mission-card__icon">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                            <h3 class="mission-card__title">Nossos Valores</h3>
+                            <p class="mission-card__text">
+                                Qualidade, transparência, inovação e compromisso com a saúde e bem-estar 
+                                de cada cliente que confia em nossos produtos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Company Stats -->
+                <div class="about__stats">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-item__number" data-count="50000">0</div>
+                            <div class="stat-item__label">Clientes Satisfeitos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-item__number" data-count="500">0</div>
+                            <div class="stat-item__label">Produtos Disponíveis</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-item__number" data-count="15">0</div>
+                            <div class="stat-item__label">Marcas Parceiras</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-item__number" data-count="5">0</div>
+                            <div class="stat-item__label">Anos de Experiência</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Company Story -->
+                <div class="about__story">
+                    <div class="story-content">
+                        <div class="story-text">
+                            <h2 class="story-title">Nossa História</h2>
+                            <p class="story-paragraph">
+                                Fundada em 2019 por entusiastas do fitness, a Supreme Nutrition nasceu da necessidade 
+                                de oferecer suplementos de qualidade com preços justos no mercado brasileiro.
+                            </p>
+                            <p class="story-paragraph">
+                                Começamos como uma pequena loja online e hoje somos uma das principais referências 
+                                em suplementos alimentares, atendendo milhares de clientes em todo o país.
+                            </p>
+                            <p class="story-paragraph">
+                                Nossa equipe é formada por profissionais apaixonados por esporte e nutrição, 
+                                sempre prontos para ajudar você a alcançar seus objetivos.
+                            </p>
+                        </div>
+                        <div class="story-image">
+                            <div class="story-image__placeholder">
+                                <span class="material-symbols-outlined">store</span>
+                                <p>Supreme Nutrition</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certifications -->
+                <div class="about__certifications">
+                    <h2 class="certifications-title">Qualidade Garantida</h2>
+                    <div class="certifications-grid">
+                        <div class="certification-item">
+                            <span class="material-symbols-outlined">verified</span>
+                            <h4>Produtos Certificados</h4>
+                            <p>Todos os produtos passam por rigoroso controle de qualidade</p>
+                        </div>
+                        <div class="certification-item">
+                            <span class="material-symbols-outlined">local_shipping</span>
+                            <h4>Entrega Rápida</h4>
+                            <p>Envio em até 24h para todo o Brasil</p>
+                        </div>
+                        <div class="certification-item">
+                            <span class="material-symbols-outlined">support_agent</span>
+                            <h4>Suporte Especializado</h4>
+                            <p>Atendimento com profissionais qualificados</p>
+                        </div>
+                        <div class="certification-item">
+                            <span class="material-symbols-outlined">security</span>
+                            <h4>Compra Segura</h4>
+                            <p>Ambiente 100% seguro para suas compras</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Features -->
+        <section class="section">
+            <div class="container">
+                <div class="features interactive-features">
+                    <div class="feature interactive-feature" data-feature="creatina">
+                        <h2 class="interactive-feature__title">CREATINA</h2>
+                        <div class="interactive-feature__content">
+                            <p class="interactive-feature__text">
+                                A creatina oferece melhora do desempenho aeróbico e aceleração da recuperação muscular. 
+                                Também contribui para o aumento da massa muscular e corporal total devido à retenção 
+                                de água nos músculos.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature interactive-feature" data-feature="whey">
+                        <h2 class="interactive-feature__title">WHEY PROTEIN</h2>
+                        <div class="interactive-feature__content">
+                            <p class="interactive-feature__text">
+                                Sua rápida absorção e digestão facilitam a recuperação muscular pós-treino. 
+                                Além disso, o whey protein pode melhorar o desempenho físico e contribuir para 
+                                a preservação da massa muscular durante a perda de peso.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature interactive-feature" data-feature="pre-treino">
+                        <h2 class="interactive-feature__title">PRÉ-TREINO</h2>
+                        <div class="interactive-feature__content">
+                            <p class="interactive-feature__text">
+                                O pré-treino oferece benefícios na musculação, como aumento da energia e do foco, 
+                                melhorando o desempenho durante o treino, além de promover maior resistência muscular 
+                                e auxiliar na recuperação pós-exercício.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="section section--dark home-team">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Nossa Equipe</h2>
+                    <p class="section__subtitle">Conheça os profissionais que fazem a Supreme Nutrition acontecer</p>
+                    <div class="section__divider"></div>
+                </div>
+                
+                <div class="team-intro">
+                    <p class="team-intro__text">
+                        Nossa equipe é formada por especialistas apaixonados por nutrição esportiva e tecnologia, 
+                        unidos pelo objetivo de oferecer a melhor experiência em suplementos alimentares.
+                    </p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-member__avatar">
+                            <div class="avatar-placeholder">
+                                <span class="material-symbols-outlined">person</span>
+                            </div>
+                            <div class="team-member__badge">CEO</div>
+                        </div>
+                        <div class="team-member__content">
+                            <h3 class="team-member__name">Felipe Macedo</h3>
+                            <p class="team-member__role">Chief Executive Officer</p>
+                            <p class="team-member__description">
+                                Fundador e CEO da Supreme Nutrition. Especialista em desenvolvimento web e 
+                                estratégias digitais, com mais de 5 anos de experiência no mercado de suplementos.
+                            </p>
+                            <div class="team-member__skills">
+                                <span class="skill-tag">Liderança</span>
+                                <span class="skill-tag">Estratégia</span>
+                                <span class="skill-tag">Tecnologia</span>
+                            </div>
+                            <div class="team-member__social">
+                                <a href="mailto:contato.dev.macedo@gmail.com" class="social-link" aria-label="Email Felipe">
+                                    <span class="material-symbols-outlined">mail</span>
+                                </a>
+                                <a href="https://linkedin.com/in/felipemacedo1" class="social-link" aria-label="LinkedIn Felipe" target="_blank" rel="noopener">
+                                    <span class="material-symbols-outlined">work</span>
+                                </a>
+                                <a href="https://github.com/felipemacedo1" class="social-link" aria-label="GitHub Felipe" target="_blank" rel="noopener">
+                                    <span class="material-symbols-outlined">code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-member__avatar">
+                            <div class="avatar-placeholder">
+                                <span class="material-symbols-outlined">design_services</span>
+                            </div>
+                            <div class="team-member__badge">Design</div>
+                        </div>
+                        <div class="team-member__content">
+                            <h3 class="team-member__name">Joel Alves</h3>
+                            <p class="team-member__role">Head of Design & UX</p>
+                            <p class="team-member__description">
+                                Responsável pela experiência do usuário e identidade visual da marca. 
+                                Especialista em design responsivo e interfaces intuitivas.
+                            </p>
+                            <div class="team-member__skills">
+                                <span class="skill-tag">UI/UX Design</span>
+                                <span class="skill-tag">Branding</span>
+                                <span class="skill-tag">Prototipagem</span>
+                            </div>
+                            <div class="team-member__social">
+                                <a href="mailto:joel@supremenutrition.com" class="social-link" aria-label="Email Joel">
+                                    <span class="material-symbols-outlined">mail</span>
+                                </a>
+                                <a href="https://linkedin.com/in/joelalves" class="social-link" aria-label="LinkedIn Joel" target="_blank" rel="noopener">
+                                    <span class="material-symbols-outlined">work</span>
+                                </a>
+                                <a href="https://behance.net/joelalves" class="social-link" aria-label="Behance Joel" target="_blank" rel="noopener">
+                                    <span class="material-symbols-outlined">palette</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-member__avatar">
+                            <div class="avatar-placeholder">
+                                <span class="material-symbols-outlined">analytics</span>
+                            </div>
+                            <div class="team-member__badge">Tech</div>
+                        </div>
+                        <div class="team-member__content">
+                            <h3 class="team-member__name">Fernando Alves</h3>
+                            <p class="team-member__role">Chief Technology Officer</p>
+                            <p class="team-member__description">
+                                Arquiteto de sistemas e especialista em infraestrutura. Garante a performance 
+                                e escalabilidade de todas as soluções tecnológicas da empresa.
+                            </p>
+                            <div class="team-member__skills">
+                                <span class="skill-tag">Arquitetura</span>
+                                <span class="skill-tag">DevOps</span>
+                                <span class="skill-tag">Performance</span>
+                            </div>
+                            <div class="team-member__social">
+                                <a href="mailto:fernando@supremenutrition.com" class="social-link" aria-label="Email Fernando">
+                                    <span class="material-symbols-outlined">mail</span>
+                                </a>
+                                <a href="https://linkedin.com/in/fernandoalves" class="social-link" aria-label="LinkedIn Fernando" target="_blank" rel="noopener">
+                                    <span class="material-symbols-outlined">work</span>
+                                </a>
+                                <a href="https://github.com/fernandoalves" class="social-link" aria-label="GitHub Fernando" target="_blank" rel="noopener">
+                                    <span class="material-symbols-outlined">code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-cta">
+                    <h3 class="team-cta__title">Quer fazer parte da nossa equipe?</h3>
+                    <p class="team-cta__text">Estamos sempre em busca de talentos apaixonados por nutrição e tecnologia.</p>
+                    <a href="mailto:rh@supremenutrition.com" class="btn btn--outline btn--lg">
+                        <span class="material-symbols-outlined">work</span>
+                        Trabalhe Conosco
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="section home-partners">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title partners-title">Nossos Parceiros</h2>
+                </div>
+                <div class="partners">
+                    <div class="partners__carousel">
+                        <div class="partners__track">
+                            <img src="assets/img/logo-parceiros/blackskull-logo.png" alt="Black Skull" class="partners__logo" loading="lazy">
+                            <img src="assets/img/logo-parceiros/darkeness-logo.png" alt="Darkness" class="partners__logo" loading="lazy">
+                            <img src="assets/img/logo-parceiros/growth-logo.png" alt="Growth" class="partners__logo" loading="lazy">
+                            <img src="assets/img/logo-parceiros/hopper-logo.png" alt="Hopper" class="partners__logo" loading="lazy">
+                            <img src="assets/img/logo-parceiros/im-logo.png" alt="Integral Médica" class="partners__logo" loading="lazy">
+                            <img src="assets/img/logo-parceiros/probiotica-logo.png" alt="Probiótica" class="partners__logo" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <nav class="footer__links" aria-label="Links do rodapé">
+                    <a href="#" class="footer__link">Política de Privacidade</a>
+                    <a href="#" class="footer__link">Termos de Uso</a>
+                    <a href="#" class="footer__link">FAQ</a>
+                    <a href="#" class="footer__link">Contato</a>
+                </nav>
+                <p class="footer__copyright">
+                    &copy; 2024 Supreme Nutrition - Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal" data-modal role="dialog" aria-labelledby="login-title" aria-hidden="true">
+        <div class="modal__content modal__content--sm">
+            <div class="modal__header">
+                <h2 id="login-title" class="modal__title">Entrar</h2>
+                <button class="modal__close" data-modal-close aria-label="Fechar modal">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="modal__body">
+                <form class="form" id="login-form">
+                    <div class="form__group">
+                        <label for="login-email" class="form__label form__label--required">E-mail</label>
+                        <input 
+                            type="email" 
+                            id="login-email" 
+                            class="form__input" 
+                            placeholder="Digite seu e-mail"
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+                    <div class="form__group">
+                        <label for="login-password" class="form__label form__label--required">Senha</label>
+                        <input 
+                            type="password" 
+                            id="login-password" 
+                            class="form__input" 
+                            placeholder="Digite sua senha"
+                            required
+                            autocomplete="current-password"
+                        >
+                    </div>
+                    <div class="form__actions form__actions--full">
+                        <button type="submit" class="btn btn--primary btn--full">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="modal" data-modal role="dialog" aria-labelledby="register-title" aria-hidden="true">
+        <div class="modal__content modal__content--md">
+            <div class="modal__header">
+                <h2 id="register-title" class="modal__title">Cadastre-se</h2>
+                <button class="modal__close" data-modal-close aria-label="Fechar modal">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="modal__body">
+                <form class="form" id="register-form">
+                    <div class="form__grid form__grid--2">
+                        <div class="form__group">
+                            <label for="register-firstname" class="form__label form__label--required">Primeiro Nome</label>
+                            <input 
+                                type="text" 
+                                id="register-firstname" 
+                                class="form__input" 
+                                placeholder="Digite seu primeiro nome"
+                                required
+                                autocomplete="given-name"
+                            >
+                            <span class="form__error" id="firstname-error"></span>
+                        </div>
+                        <div class="form__group">
+                            <label for="register-lastname" class="form__label form__label--required">Sobrenome</label>
+                            <input 
+                                type="text" 
+                                id="register-lastname" 
+                                class="form__input" 
+                                placeholder="Digite seu sobrenome"
+                                required
+                                autocomplete="family-name"
+                            >
+                            <span class="form__error" id="lastname-error"></span>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label for="register-email" class="form__label form__label--required">E-mail</label>
+                        <input 
+                            type="email" 
+                            id="register-email" 
+                            class="form__input" 
+                            placeholder="Digite seu e-mail"
+                            required
+                            autocomplete="email"
+                        >
+                        <span class="form__error" id="email-error"></span>
+                    </div>
+                    <div class="form__group">
+                        <label for="register-phone" class="form__label">Telefone</label>
+                        <input 
+                            type="tel" 
+                            id="register-phone" 
+                            class="form__input" 
+                            placeholder="(11) 99999-9999"
+                            autocomplete="tel"
+                        >
+                        <span class="form__error" id="phone-error"></span>
+                    </div>
+                    <div class="form__grid form__grid--2">
+                        <div class="form__group">
+                            <label for="register-password" class="form__label form__label--required">Senha</label>
+                            <input 
+                                type="password" 
+                                id="register-password" 
+                                class="form__input" 
+                                placeholder="Mínimo 8 caracteres"
+                                required
+                                autocomplete="new-password"
+                            >
+                            <span class="form__error" id="password-error"></span>
+                        </div>
+                        <div class="form__group">
+                            <label for="register-confirm-password" class="form__label form__label--required">Confirmar Senha</label>
+                            <input 
+                                type="password" 
+                                id="register-confirm-password" 
+                                class="form__input" 
+                                placeholder="Digite a senha novamente"
+                                required
+                                autocomplete="new-password"
+                            >
+                            <span class="form__error" id="confirm-password-error"></span>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <fieldset>
+                            <legend class="form__label">Gênero</legend>
+                            <div class="form__radio-group form__radio-group--inline">
+                                <div class="form__radio">
+                                    <input type="radio" id="gender-female" name="gender" value="female">
+                                    <label for="gender-female">Feminino</label>
+                                </div>
+                                <div class="form__radio">
+                                    <input type="radio" id="gender-male" name="gender" value="male">
+                                    <label for="gender-male">Masculino</label>
+                                </div>
+                                <div class="form__radio">
+                                    <input type="radio" id="gender-other" name="gender" value="other">
+                                    <label for="gender-other">Outro</label>
+                                </div>
+                                <div class="form__radio">
+                                    <input type="radio" id="gender-none" name="gender" value="prefer-not-to-say">
+                                    <label for="gender-none">Prefiro não dizer</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form__actions form__actions--full">
+                        <button type="submit" class="btn btn--primary btn--full">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

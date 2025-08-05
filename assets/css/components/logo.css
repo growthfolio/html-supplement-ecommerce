@@ -1,0 +1,59 @@
+/* Logo Component */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--font-family-secondary);
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+}
+
+.logo:hover {
+  color: var(--color-primary);
+  transform: scale(1.02);
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo__main {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.5px;
+}
+
+.logo__sub {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: -2px;
+}
+
+.logo__icon {
+  margin-right: var(--spacing-xs);
+  font-size: 28px;
+  color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo__main {
+    font-size: var(--font-size-lg);
+  }
+  
+  .logo__sub {
+    font-size: 10px;
+  }
+  
+  .logo__icon {
+    font-size: 24px;
+  }
+}

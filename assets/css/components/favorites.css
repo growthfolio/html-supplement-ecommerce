@@ -1,0 +1,122 @@
+/* Favorites Component */
+.favorite-btn {
+  position: absolute;
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
+
+.favorite-btn:hover {
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.favorite-btn__icon {
+  font-size: 18px;
+  color: var(--color-text-light);
+  transition: all var(--transition-fast);
+}
+
+.favorite-btn--active .favorite-btn__icon {
+  color: var(--color-error);
+  animation: heartbeat 0.6s ease;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Favorites Counter */
+.favorites-counter {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.favorites-counter:hover {
+  background-color: var(--color-surface);
+}
+
+.favorites-counter__icon {
+  font-size: 24px;
+  color: var(--color-text);
+}
+
+.favorites-counter__badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--color-error);
+  color: white;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: transform var(--transition-fast);
+}
+
+.favorites-counter__badge--visible {
+  transform: scale(1);
+}
+
+/* Favorites Toast */
+.favorites-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background-color: var(--color-secondary);
+  color: white;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  z-index: 1000;
+  opacity: 0;
+  transition: all var(--transition-base);
+}
+
+.favorites-toast--visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.favorites-toast__icon {
+  font-size: 20px;
+}
+
+.favorites-toast__text {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}

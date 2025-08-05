@@ -1,0 +1,154 @@
+/* Main CSS File - Supreme Nutrition */
+
+/* Base Styles */
+@import url('base/variables.css');
+@import url('base/reset.css');
+@import url('base/utilities.css');
+
+/* Components */
+@import url('components/button.css');
+@import url('components/card.css');
+@import url('components/form.css');
+@import url('components/header.css');
+@import url('components/modal.css');
+@import url('components/theme-toggle.css');
+@import url('components/skeleton.css');
+@import url('components/tooltip.css');
+@import url('components/scroll-indicator.css');
+@import url('components/cart.css');
+@import url('components/favorites.css');
+@import url('components/micro-interactions.css');
+@import url('components/logo.css');
+@import url('components/search-results.css');
+@import url('components/team.css');
+
+/* Layout Styles */
+@import url('layout/footer.css');
+@import url('layout/hero.css');
+@import url('layout/section.css');
+
+/* Page Specific Styles */
+@import url('pages/home.css');
+@import url('pages/products.css');
+@import url('pages/about.css');
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+/* Material Icons Configuration */
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+}
+
+/* Global Styles */
+body {
+  overflow-x: hidden;
+}
+
+body.modal-open,
+body.nav-open,
+body.cart-open {
+  overflow: hidden;
+}
+
+/* Header scroll effects */
+.header--scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.header--hidden {
+  transform: translateY(-100%);
+  transition: transform var(--transition-base);
+}
+
+/* Image loading states */
+.image-loading {
+  opacity: 0.5;
+  filter: blur(2px);
+}
+
+.image-loaded {
+  opacity: 1;
+  filter: none;
+  transition: all var(--transition-base);
+}
+
+/* Button success state */
+.btn--success {
+  background-color: var(--color-success) !important;
+  color: white !important;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.6s ease-out;
+}
+
+/* Print styles */
+@media print {
+  .header,
+  .footer,
+  .modal,
+  .btn {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  .card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
